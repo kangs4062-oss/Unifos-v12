@@ -1,0 +1,30 @@
+<!-- App.html: Single-file React + Three.js starter -->
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>AI Animal Builder — React Starter</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <style>body{margin:0;font-family:Inter,Arial;background:#071018;color:#e6eef8}</style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/javascript">
+      const e = React.createElement;
+      function App(){
+        return e('div', {style:{display:'flex',height:'100vh'}},
+          e('div', {style:{width:320,padding:20,background:'#0b1726'}},
+            e('h2', null, 'AI Animal Builder'),
+            e('button', {onClick: ()=> alert('Use demo.html for now')}, 'Open Demo')
+          ),
+          e('div', {style:{flex:1,display:'flex',alignItems:'center',justifyContent:'center'}},
+            e('div', null, 'React + Three.js starter. Replace center with canvas and Three.js scene.')
+          )
+        );
+      }
+      ReactDOM.render(e(App), document.getElementById('root'));
+    </script>
+  </body>
+</html>
